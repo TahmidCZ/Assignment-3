@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(180deg, #001a4d 0%, #002663 55%, #003377 100%);
+    position: relative;
+}
+
+.moon {
+    position: absolute;
+    top: 8%;
+    right: 8.5%;
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 35%, #ffffff 0%, #f0f0f0 60%, #dcdcdc 100%);
+    box-shadow: 0 0 25px 6px rgba(255, 255, 255, 0.35),
+                0 0 50px 15px rgba(255, 255, 255, 0.15);
+}
+
+.house {
+    position: absolute;
+    bottom: 17.5%;
+    left: 55.8%;
+    width: 216px;
+}
+
+@media (max-width: 768px) {
+  .house {
+    position: absolute;
+    bottom: 17.5%;
+    left: 25.8%;
+    width: 216px;
+  }
+}
+
+.roof {
+    width: 0;
+    height: 0;
+    border-left: 108px solid transparent;
+    border-right: 108px solid transparent;
+    border-bottom: 58px solid #8b4513;
+}
+
+.house-body {
+    width: 216px;
+    height: 216px;
+    background-color: #ffcc99;
+    border: 2px solid #7a3e1d;
+    border-top: none;
+    position: relative;
+}
+
+.window {
+    position: absolute;
+    top: 32px;
+    width: 44px;
+    height: 44px;
+    background-color: #87ceeb;
+    border: 2px solid #4a4a4a;
+}
+
+.left-window {
+    left: 33px;
+}
+
+.right-window {
+    right: 33px;
+}
+
+.door-background {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 58px;
+    height: 108px;
+    background-color: #2b1405;
+    perspective: 600px;
+}
+
+.door {
+    width: 100%;
+    height: 100%;
+    background-color: #654321;
+    transform-origin: left center;
+    transition: transform 0.7s ease-in-out;
+    cursor: pointer;
+}
+
+.door-background:hover .door {
+    transform: rotateY(-105deg);
+}
